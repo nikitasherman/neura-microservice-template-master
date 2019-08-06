@@ -15,7 +15,6 @@ lazy val root = (project in file(".")).
     buildInfoOptions += BuildInfoOption.BuildTime,
     buildInfoOptions += BuildInfoOption.ToJson,
     buildInfoPackage := "$package$",
-    buildInfoOptions += BuildInfoOption.Traits("$package$.logging.LoggerContextInfo"),
     buildInfoKeys := Seq[BuildInfoKey](name, version, "gitHash" -> git.gitHeadCommit.value.getOrElse("emptyRepository"))
   )
 
